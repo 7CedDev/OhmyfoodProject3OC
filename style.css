@@ -1,0 +1,24 @@
+/*General*/
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Shrikhand&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align:center;
+    font-family: Shrikhand, Roboto;
+    font-weight:lighter;
+}
+
+.pri-color {
+    color: #9356DC;
+}
+
+.sec-color {
+    color:#FF79DA
+}
+
+.ter-color {
+    color:#99E2D0;
+}
