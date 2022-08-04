@@ -17,16 +17,15 @@ body {
 }
 
 /*header*/
-.title h1 {
+.title__header {
   box-shadow: 0 2px 2px #C3C3C3;
   margin: 0;
   padding: 0.5rem;
   position: relative;
-  font-family: Shrikhand;
 }
 
 /*Navigation*/
-.nav-location {
+.nav__location {
   background-color: #e3e3e3;
   padding: 0.1%;
   margin: 0;
@@ -37,15 +36,15 @@ body {
   color: rgb(75, 75, 75);
 }
 
-/* Nav-Presentation  */
-.location-icon {
+.location__icon {
   margin: 1rem;
 }
 
-.location-text {
+.location__text {
   font-weight: 500;
 }
 
+/* Nav-Presentation  */
 .nav-pres {
   background-color: #f3f3f3;
 }
@@ -59,7 +58,7 @@ body {
   font-weight: 300;
 }
 
-.nav-button {
+.nav__button {
   border-radius: 50px;
   padding: 0 1.5rem;
   margin: 5%;
@@ -67,8 +66,115 @@ body {
   background-image: linear-gradient(#FF79DA, #9356DC);
   color:white;
   border:none;
+  box-shadow: 0 5px 5px #D3D3D3;
 }
 
+/* Fonctionnement */
 .fonction {
-    text-align: start;
+  text-align: start;
+}
+
+.fonction h2 {
+  margin:7% 5%;
+}
+
+.fonction__list {
+  list-style-type: none;
+}
+
+.fonction__list button{
+  border-radius: 15px;
+  padding:1rem 1.5rem;
+  background: #f5f5f5;
+  margin:2%;
+  border:none;
+  box-shadow: 0 5px 5px #D3D3D3;
+  position: relative;
+}
+
+.fonc-num {
+  background-color: #9356DC;
+  width:1.2rem;
+  height:1.2rem;
+  border-radius:50%;
+  position:absolute;
+  left:-0.5rem;
+  color:white;
+}
+
+.but-list {
+  margin:0 15px 0 2px;
+  color: #A9A9A9;
+}
+
+/* Restaurants */
+.resto__list {
+ background-color: #f3f3f3;
+ text-align: start;
+ padding: 1% 5%;
+} 
+
+.resto__title {
+  padding:7% 0 0 0;
+}
+
+.resto__card {
+  width:100%;
+  display:grid;
+  background-color: white;
+  border-radius: 5%;
+  margin: 7% 0;
+  text-decoration: none; 
+  box-shadow: 0 5px 5px #D3D3D3;
+}
+
+.resto__image {
+  width:100%;
+  border-radius: 15px 15px 0 0;
+  height:190px;
+  object-fit: cover;
+}
+/* positionnement et couleurs du texte */
+.resto__body {
+  color:black;
+  padding:0 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+/* ecartement entre les deux textes */
+.resto__body > h3 > p {
+  margin:1%;
+}  
+
+.heart {
+  display: flex;
+  justify-content:flex-end;
+}
+
+/* Footer */
+
+.footer__contain {
+  background-color: #424949;
+  text-align:start;
+  padding:5%;
+  color: white;
+  gap:10% 5%;
+}
+
+.logo {
+ width:40%;
+ filter:invert(100%);
+}
+
+.p__icon {
+  margin-left: 5%;
+}
+
+.footer__icon {
+  width:6%;
+}
+
+.footer__contact {
+  text-decoration: none; 
+  color:white;
 }

@@ -1,0 +1,73 @@
+/*General*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: start;
+  font-family: Roboto;
+  font-weight: lighter;
+  margin:0;
+}
+
+.color-grey {
+  color: grey;
+}
+
+/*header*/
+.title__header {
+  box-shadow: 0 2px 2px #C3C3C3;
+  margin: 0;
+  padding: 0.5rem;
+  position: relative;
+  text-align: center;
+}  
+
+.main_image {
+    width:100%;
+}
+
+.return_menu {
+    background-color: #9356DC;
+}
+
+.button {
+border-radius: 50px;
+  padding: 0 1.5rem;
+  margin: 5%;
+  margin-bottom:15%;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color:white;
+  border:none;
+  box-shadow: 0 5px 5px #D3D3D3;
+}
+
+/* Footer */
+
+.footer__contain {
+    background-color: #424949;
+    text-align:start;
+    padding:5%;
+    color: white;
+    gap:10% 5%;
+  }
+  
+  .logo {
+   width:40%;
+   filter:invert(100%);
+  }
+  
+  .p__icon {
+    margin-left: 5%;
+  }
+  
+  .footer__icon {
+    width:6%;
+  }
+  
+  .footer__contact {
+    text-decoration: none; 
+    color:white;
+  }
