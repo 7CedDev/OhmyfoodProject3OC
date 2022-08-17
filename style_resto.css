@@ -11,37 +11,113 @@ body {
   font-weight: lighter;
   margin:0;
 }
-
-.color-grey {
-  color: grey;
-}
+ a {
+  text-decoration: none;
+  color:black;
+ }
 
 /*header*/
+
 .title__header {
-  box-shadow: 0 2px 2px #C3C3C3;
   margin: 0;
-  padding: 0.5rem;
+  padding: 1rem;
   position: relative;
   text-align: center;
 }  
+
+.arrow {
+position:absolute;
+left: 1rem;
+top:1.5rem;
+}
+
+/* Main */
 
 .main_image {
     width:100%;
 }
 
-.return_menu {
-    background-color: #9356DC;
+.menu__container {
+  margin:0;
+  display: grid;
+  grid-gap: 1.5rem;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 40px 40px 40px 40px;
+}
+
+.menu__title {
+display:flex;
+justify-content:space-between;
+align-items: center;
+}
+
+h2 {
+  font-family: Shrikhand , cursive;
+  font-size: 1.7rem;
+  font-style: italic;
+}
+
+.menu__starter {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  padding-bottom:1%;
+  border-bottom: solid 2px #99E2D0;
+  width:13%;
+}
+
+.card__content {
+  margin:0;
+  padding:0;
+}
+
+.card__dish {
+  border: solid 1px transparent;
+  border-radius: 20px;
+  Background: white;
+  padding:0.5rem;
+  box-shadow: 1px 1px 10px #D7D7D7;
+}
+
+.card--text  {
+  display:flex;
+  justify-content: space-between;
+  margin:0;
+  padding:0;
+}
+
+h4 {
+  padding:0;
+  margin:0;
+}
+
+.card--price {
+  display: flex;
+  align-items:center;
+  font-weight: bold;
 }
 
 .button {
-border-radius: 50px;
-  padding: 0 1.5rem;
-  margin: 5%;
+  border-radius: 50px;
+  padding: 1rem 0;
+  margin: 10% 25%;
   margin-bottom:15%;
   background-image: linear-gradient(#FF79DA, #9356DC);
   color:white;
   border:none;
   box-shadow: 0 5px 5px #D3D3D3;
+}
+
+button:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 300ms;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(50, 50, 93, 0.25) 0 20px 40px -20px;
 }
 
 /* Footer */

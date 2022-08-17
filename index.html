@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/normalize.css">
     <!--normalize-->
-    <script src="https://kit.fontawesome.com/c077c11df3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/normalize.css">
     <!--KitFontawesome-->
+    <script src="https://kit.fontawesome.com/c077c11df3.js" crossorigin="anonymous"></script>
+
     <title>Oh My Food!</title>
-    <link rel="stylesheet" href="style.css" rel="stylesheet" href="style_resto.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style_resto.css"> -->
 </head>
 
 <body>
@@ -19,8 +21,8 @@
         <!--Header-->
         <header>
             <div class="title__header">
-                <div><img class="logo_header" src="/Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood">
-                </div>
+                <img class="logo_header" src="/Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood"
+                    width="170" height="30">
             </div>
 
         </header>
@@ -41,9 +43,11 @@
                     <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 </div>
 
-                <button class="nav__button">
-                    <P>Explorer nos restaurants</P>
-                </button>
+                <a href="#Restaurants">
+                    <button class="nav__button">
+                        <p>Explorer nos restaurants</p>
+                    </button>
+                </a>
             </section>
 
         </nav>
@@ -54,58 +58,71 @@
             </div>
             <ol class="fonction__list">
                 <li><button><span class="fonc-num">1</span>
-                        <i class="but-list fa-solid fa-mobile-screen-button"></i>Choissisez un restaurant</button>
+                        <i class="but-list fa-solid fa-mobile-screen-button fa-2xl"></i>
+                        <p>Choissisez un restaurant</p>
+                    </button>
                 </li>
                 <li><button><span class="fonc-num">2</span>
-                        <i class="but-list fa-solid fa-list"></i>Composez votre menu</button></li>
+                        <i class="but-list fa-solid fa-list fa-xl"></i>
+                        <p>Composez votre menu</p>
+                    </button></li>
                 <li><button><span class="fonc-num">3</span>
-                        <i class="but-list fa-solid fa-store"></i>Dégustez au restaurant</button></li>
+                        <i class="but-list fa-solid fa-store fa-xl"></i>
+                        <p>Dégustez au restaurant</p>
+                    </button></li>
             </ol>
 
         </aside>
         <!-- Restaurants -->
         <section class="resto__list">
             <div class="resto__title">
-                <h2>Restaurants</h2>
+                <h2 id="Restaurants">Restaurants</h2>
             </div>
+
             <div class="wrapper">
                 <a href="#" class="resto__card 1">
                     <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_1.jpg"
                         alt="image de restaurant une asiette avec repas">
+                    <div class="item__new">Nouveau</div>
                     <div class="resto__body">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
-                        <div class="heart"><i class="fa-thin fa-heart"></i></div>
+                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                        <span class="heart__full"><i class="fa-regular fa-heart"></i></span>
                     </div>
-            </div>
-            </a>
-            <a href="#" class="resto__card 2">
-                <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_2.jpg"
-                    alt="image de restaurant une asiette avec repas">
-                <div class="resto__body">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
-                    <div class="heart"><i class="fa-thin fa-heart"></i></div>
-                </div>
-            </a>
-            <a href="#" class="resto__card 3">
-                <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_3.jpg"
-                    alt="image de restaurant une asiette avec repas">
-                <div class="resto__body">
-                    <h3>A la française</h3>
-                    <p>Cité Rouge</p>
-                    <div class="heart"><i class="fa-thin fa-heart"></i></div>
-                </div>
-            </a>
-            <a href="#" class="resto__card 4">
-                <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_4.jpg"
-                    alt="image de restaurant une asiette avec repas">
-                <div class="resto__body">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
-                    <i class="heart fa-thin fa-heart"></i>
-                </div>
-            </a>
+                </a>
+
+                <a href="#" class="resto__card 2">
+                    <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_2.jpg"
+                        alt="image de restaurant une asiette avec repas">
+                    <div class="item__new">Nouveau</div>
+                    <div class="resto__body">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                        <span class="heart__full"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </a>
+                <a href="menu_1.html" class="resto__card 3">
+                    <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_3.jpg"
+                        alt="image de restaurant une asiette avec repas">
+                    <div class="resto__body">
+                        <h3>A la française</h3>
+                        <p>Cité Rouge</p>
+                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                        <span class="heart__full"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </a>
+                <a href="#" class="resto__card 4">
+                    <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_4.jpg"
+                        alt="image de restaurant une asiette avec repas">
+                    <div class="resto__body">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                        <span class="heart__full"><i class="fa-regular fa-heart"></i></span>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
