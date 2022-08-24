@@ -11,12 +11,20 @@ body {
   font-weight: lighter;
   margin:0;
 }
- a {
+
+a {
   text-decoration: none;
   color:black;
  }
 
 /*header*/
+header {
+  position:sticky;
+  z-index: 100;
+  background: white;
+  width:100%;
+  top:0;
+}
 
 .title__header {
   margin: 0;
@@ -26,30 +34,47 @@ body {
 }  
 
 .arrow {
-position:absolute;
-left: 1rem;
-top:1.5rem;
+  position:absolute;
+  left:1rem;
+  top:1.5rem;
 }
 
 /* Main */
 
 .main_image {
     width:100%;
+    position: relative;   
+    max-height: 25rem;
+    object-fit: cover;
+    object-position: center;
 }
 
+/* Menu */
 .menu__container {
-  margin:0;
+  margin-top:-3rem;
+  position:sticky;
   display: grid;
   grid-gap: 1.5rem;
   background: #f9f9f9;
   padding: 1.5rem;
-  border-radius: 40px 40px 40px 40px;
+  border-radius: 40px 40px 0 0;
 }
 
+@keyframes menu__container {
+  0% {
+    transform:opacity(0);
+  }
+
+  100% {
+    transform:opacity(1) 1000ms;
+  }
+}
+
+
 .menu__title {
-display:flex;
-justify-content:space-between;
-align-items: center;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
 }
 
 h2 {
@@ -58,36 +83,54 @@ h2 {
   font-style: italic;
 }
 
-.menu__starter {
+.menu__starter, .menu__course, .menu__dessert {
   display: grid;
   grid-gap: 1.5rem;
+  max-width: 30rem;
 }
 
 h3 {
   text-transform: uppercase;
   padding-bottom:1%;
   border-bottom: solid 2px #99E2D0;
-  width:13%;
-}
-
-.card__content {
-  margin:0;
-  padding:0;
+  width:2.5rem;
 }
 
 .card__dish {
   border: solid 1px transparent;
   border-radius: 20px;
   Background: white;
+  white-space:nowrap;
   padding:0.5rem;
   box-shadow: 1px 1px 10px #D7D7D7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 1s;
 }
+
+.card__dish:hover  {
+  transform:scale(1.01);
+  filter: brightness(1.01);
+  cursor: pointer;
+  transition: 200ms;
+  box-shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px;
+}
+
 
 .card--text  {
   display:flex;
   justify-content: space-between;
   margin:0;
   padding:0;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+.card--text:hover {
+ overflow: hidden;
+ text-overflow: ellipsis;
+ transition:ease-in-out 4s;
+ position:relative;
 }
 
 h4 {
@@ -99,6 +142,35 @@ h4 {
   display: flex;
   align-items:center;
   font-weight: bold;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+
+.card--validator {
+  overflow:hidden;
+  color:white;
+  display:hidden;
+  background: #99E2D0;
+  width:4rem;
+  height:4rem;
+  position:absolute;
+  right:0;
+  margin:0;
+  padding:0;
+}
+
+.card--validator:hover {
+  overflow:hidden;
+  display:block;
+  transition:ease-in-out 4s;
+  
+}
+
+.check--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:1.5rem;
 }
 
 .button {
@@ -120,6 +192,10 @@ button:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(50, 50, 93, 0.25) 0 20px 40px -20px;
 }
 
+.heart {
+  font-size: 25px;
+}
+
 /* Footer */
 
 .footer__contain {
@@ -131,8 +207,8 @@ button:hover {
   }
   
   .logo {
-   width:40%;
    filter:invert(100%);
+   width:7rem;
   }
   
   .p__icon {
@@ -146,4 +222,16 @@ button:hover {
   .footer__contact {
     text-decoration: none; 
     color:white;
+  } 
+
+  @media (min-width:768px) {
+   
+  #wrapper__menu {
+    display: grid;
+    width:100%;
+    grid-template-areas:"ms mc md"
+                        "ms mc md";
+    grid-gap: 2.5rem;                              
+    
+  }
   }
