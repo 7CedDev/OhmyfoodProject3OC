@@ -18,6 +18,13 @@
 <body>
 
     <main>
+        <!-- Loader -->
+
+        <div class="loader">
+            <div class="loader--spin"></div>
+            <p class="loader--text">Just a sec...</p>
+        </div>
+
         <!--Header-->
         <header>
             <div class="title__header">
@@ -79,48 +86,44 @@
                 <h2 id="Restaurants">Restaurants</h2>
             </div>
 
-            <div class="wrapper">
-                <a href="menu_3.html" class="resto__card 1">
+            <div id="wrapper">
+                <a href="menu_3.html" class="resto__card rc1">
                     <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_1.jpg"
                         alt="image de restaurant une asiette avec repas">
                     <div class="item__new">Nouveau</div>
                     <div class="resto__body">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
-                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
-                        <span class="heart__full"><i class="fa-regular fa-heart"></i></span>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
                 </a>
 
-                <a href="menu_2.html" class="resto__card 2">
+                <a href="menu_2.html" class="resto__card rc2">
                     <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_2.jpg"
                         alt="image de restaurant une asiette avec repas">
                     <div class="item__new">Nouveau</div>
                     <div class="resto__body">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                        <span class="heart__full"><i class="fa-regular fa-heart"></i></span>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
                 </a>
-                <a href="menu_1.html" class="resto__card 3">
+                <a href="menu_1.html" class="resto__card rc3">
                     <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_3.jpg"
                         alt="image de restaurant une asiette avec repas">
                     <div class="resto__body">
                         <h3>A la française</h3>
                         <p>Cité Rouge</p>
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                        <span class="heart__full"><i class="fa-regular fa-heart"></i></span>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
                 </a>
-                <a href="menu_4.html" class="resto__card 4">
+                <a href="menu_4.html" class="resto__card rc4">
                     <img class="resto__image" src="/Maquettes_Ohmyfood/images/restaurants/resto_4.jpg"
                         alt="image de restaurant une asiette avec repas">
                     <div class="resto__body">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                        <span class="heart__full"><i class="fa-regular fa-heart"></i></span>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
                 </a>
             </div>
@@ -128,7 +131,8 @@
     </main>
     <!--Footer-->
     <footer class="footer__contain">
-        <div><img class="logo" src="/Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood"></div>
+        <a href="#"><img class="logo" src="/Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood">
+        </a>
 
         <p><i class="footer__icon fa-solid fa-utensils fa-xs"></i>Proposer un restaurant</p>
         <p><i class="footer__icon fa-solid fa-handshake-angle fa-xs"></i>Devenir partenaire</p>
