@@ -337,7 +337,6 @@ right: 1rem;
 
 .logo {
  filter:invert(100%);
- font: 400;
 }
 
 .footer__icon {
@@ -362,8 +361,7 @@ right: 1rem;
 /* Fonctionnnemt */
 
 .fonction__title {
-  align-items: center;
-  margin: 1rem 40%;
+  margin: 1rem 42%;
 }
 
 .fonction__list {
