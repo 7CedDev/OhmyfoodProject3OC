@@ -1,20 +1,21 @@
 /*General*/
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 * {
   box-sizing: border-box;
+
 }
 
 body {
   text-align: center;
-  font-family: Roboto;
-  font-weight: lighter;
+  font-family: Roboto, sans-serif;
   margin:0;
 }
 
-.color-grey {
-  color: grey;
-}
+a {
+  text-decoration: none;
+  color:black;
+ }
 
 .main {
   position:relative;
@@ -50,7 +51,7 @@ body {
   border-radius: 50%;
   width:100px;
   height:100px;
-  animation: 1.2s spin infinite ease-in-out;
+  animation: 1.2s ease-in-out infinite spin;
   background:transparent;
   opacity: 0.8;
 
@@ -63,11 +64,11 @@ body {
   /* Animation du loader*/
 
  @keyframes spin {
-    0% {
-      transform:rotate (0deg);
+    from {
+      transform:rotate(0deg);
     }
 
-    100% {
+    to {
       transform:rotate(360deg);
     }
   }
@@ -94,10 +95,6 @@ header {
   margin: 0;
   padding: 0.5rem;
   top:0; 
-}
-
-a {
-  text-decoration: none;
 }
 
 /*Navigation*/
@@ -127,13 +124,15 @@ a {
   background-color: #f3f3f3;
 }
 
-.nav-pres__title {
+.nav-pres__title  h2{
   padding: 5% 12% 0 12%;
+  Font-family:Roboto, sans-serif;
+  margin:0;
+  display: block;
 }
 
 .nav-pres__text {
   padding: 0 10% 0 10%;
-  font-weight: 300;
 }
 
 .nav__button input{
@@ -160,11 +159,11 @@ a {
   text-align:start;
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   width:100%;
 }
 
-.fonction__title {
+.fonction__title h2{
+  font-family: Roboto, sans-serif;
   margin:2rem 1.2rem 0 1.2rem;
   width:100%;
   text-align: start;
@@ -203,6 +202,7 @@ a {
   transform:scale(1.01);
   transition: 200ms;
   cursor: pointer;
+  filter:none
 }
 
 .fonc-num {
@@ -238,15 +238,16 @@ li:hover .but-list {
  padding-bottom:10%;
 } 
 
-.resto__title {
+.resto__title h2{
   padding:7% 0 0 0;
+  font-family: Roboto, sans-serif;
 }
 
 .resto__card {
   width:100%;
   display:grid;
   background-color: white;
-  border-radius: 5%;
+  border-radius: 15px;
   margin: 5% 0;
   text-decoration: none; 
   box-shadow: 0 5px 5px #D3D3D3;
@@ -283,15 +284,20 @@ right: 1rem;
 /* positionnement et couleurs du texte */
 .resto__body {
   color:black;
-  padding: 3%;
+  padding:0 2%;
   position:relative;
   margin:0;
-  
+  font-weight:400; 
 }
-/* espace entre h3 et p */
-.resto__body p, h3 {
-  margin: 1%;
+
+.card-body--title {
+  text-transform:none;
+  padding-bottom:0;
+  margin-bottom:0;
+  border-bottom:none;
+  width:initial;
 }
+
 
 /* Hearts */
 .heart {
@@ -333,6 +339,7 @@ right: 1rem;
   flex-direction: column;
   padding:5%;
   color: white;
+  font-weight:400;
 }
 
 .logo {
@@ -360,6 +367,10 @@ right: 1rem;
 
 /* Fonctionnnemt */
 
+.fonction {
+  justify-content: space-around;
+}
+
 .fonction__title {
   margin: 1rem 42%;
 }
@@ -379,7 +390,15 @@ right: 1rem;
   grid-template-areas:"rc1 rc2"
                       "rc3 rc4"; 
   grid-template-columns:repeat(2,minmax(0, 1fr));                   
-  grid-gap: 5rem;                              
+  grid-gap:0 3rem;                              
+}
+
+.resto__list {
+  padding-bottom:5%;
+ } 
+
+.resto__title h2{
+  padding:0;
 }
 
 .resto__card {
@@ -441,5 +460,285 @@ right: 1rem;
   display: flex;
   flex-direction: row;
   gap:7rem;
+}
+}
+
+
+/* Style DES PAGES MENU DU RESTO */
+
+
+
+
+/*header*/
+
+.title__header--menu {
+  margin: 0;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+}  
+
+.arrow {
+  position:absolute;
+  left:1rem;
+  top:1.5rem;
+}
+
+/* Main */
+
+.main_image {
+    width:100%;
+    position: relative;   
+    max-height: 25rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Menu */
+.menu__container {
+  margin-top:-3rem;
+  position:sticky;
+  display: grid;
+  background: #f9f9f9;
+  padding: 0.5rem 1rem;
+  border-radius: 40px 40px 0 0;
+}
+
+.menu__title h2 {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  font-family: Shrikhand , cursive;
+  font-size: 1.7rem;
+}
+
+#wrapper__menu {
+  width:100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap:1rem;
+ }
+
+/* Hearts */
+
+.heart-menu {
+  position:absolute;
+  right:2rem;
+  top:2.5rem;
+  font-size: 25px;
+  width:2rem;
+  align-items: center;
+}
+
+.heart-menu:hover {
+  transform: scale(1.07);
+  border:transparent;
+  cursor: pointer;
+}
+
+.heart-menu--s {
+  color:transparent;
+  width:2rem;
+  right:2rem;
+  top:2.5rem;
+  opacity:0; 
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+}
+
+.heart-menu--s:hover {
+  opacity:1;
+  transform:scale(1.08) ;
+  transition:1.5s ease-in-out;
+  cursor: pointer;
+}
+
+.menu__starter> .menu__course > .menu__dessert {
+  display: flex;
+  flex-direction: column;
+  margin-bottom:1rem;
+  padding: 2rem;
+  width:100%;
+}
+
+/* Animation progressive des menus */
+
+.cd1 {
+  animation: 1s ease-in-out 100ms progressiveappear ;
+}
+
+.cd2 {
+  animation: 1s ease-in-out 200ms progressiveappear ;
+}
+
+.cd3 {
+  animation: 1s ease-in-out 350ms progressiveappear ;
+}
+
+.cd4 {
+  animation: 1s ease-in-out 500ms progressiveappear ;
+}
+
+@keyframes progressiveappear {
+  0%{
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h3  {
+  text-transform: uppercase;
+  padding-bottom:0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: solid 2px #99E2D0;
+  width:2.5rem;
+}
+
+.card__dish {
+animation-fill-mode: both;
+background-color: white;
+text-align: start;
+border-radius: 20px;
+padding: 15px 20px 0 10px;
+margin-bottom: 15px;
+position: relative;
+overflow: hidden;
+z-index: 0;
+width: 100%;
+box-shadow: 1px 1px 10px #D7D7D7;
+}
+
+.card__dish:hover .card--validator  {
+  transform:scale(1.01);
+  filter: brightness(1.01);
+  cursor: pointer;
+  transition: 0.7s;
+  right:0;
+  top:-10px;
+  z-index: 2;
+  box-shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px;
+}
+
+.card__content {
+  width:100%;
+}
+
+.card__content:hover {
+  width: calc(100% - 80px);
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+}
+
+.card--title h4{
+  font-family: "Roboto";
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--text  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card--text p {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--price {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+ }
+
+.card--validator {
+  position: absolute;
+  text-align: center;
+  right: -85px;
+  top: 0;
+  width: 85px;
+  height: 110px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(100%);
+}
+
+.card__dish:hover .card--validator .check--icon {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width:100%;
+  height:100%;
+  transform-origin: center;
+  animation:0.7s ease-in-out checkrotate;
+}
+
+@keyframes checkrotate {
+  0%{
+    transform:rotate(-360deg)
+  }
+  
+  100%{
+    transform:rotate(0deg);
+  }
+}
+
+.button {
+  border-radius: 50px;
+  padding: 1rem 0;
+  margin: 5% 30% 12%;
+  max-width: 15rem;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color:white;
+  border:none;
+  box-shadow: 0 5px 5px #D3D3D3;
+}
+
+button:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 300ms;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(50, 50, 93, 0.25) 0 20px 40px -20px;
+}
+
+ /* VERSION TABLETTE */
+/* Footer identique à la page Accueil */
+
+
+@media (min-width:768px) {
+  /* Menu Restaurant */
+  #wrapper__menu {
+  grid-template-columns: repeat(2,minmax(0, 1fr));
+  gap: 3rem; 
+}
+
+/* Bouton de Commande */
+.button {
+  margin: 3% 37% 7%;
+  max-width: 20rem;
+  font-size: large;
+}
+}
+
+ /* VERSION DESKTOP */
+
+@media (min-width:1025px) {
+  /* Menu Restaurant */
+  #wrapper__menu {
+  grid-template-columns: repeat(3,minmax(0, 1fr));  
 }
 }
